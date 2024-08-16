@@ -91,5 +91,25 @@ func main() {
 	}
 
 	// label di loop
-	// TODO
+outerLoop:
+	for i := 0; i < 5; i++ {
+		for j := 0; j < 5; j++ {
+			if i == 3 {
+				break outerLoop
+			}
+			fmt.Print("matriks [", i, "][", j, "]", "\n")
+		}
+	}
+
+	/*
+		Tepat sebelum keyword for terluar, terdapat baris kode outerLoop:
+		Maksud dari kode tersebut adalah disiapkan sebuah label bernama
+		outerLoop untuk for di bawahnya. Nama label bisa diganti dengan nama
+		lain (dan harus diakhiri dengan tanda titik dua atau colon (:) ).
+
+		Pada for bagian dalam, terdapat seleksi kondisi untuk pengecekan nilai
+		i. Ketika nilai tersebut sama dengan 3, maka break dipanggil dengan
+		target adalah perulangan yang dilabeli outerLoop, perulangan tersebut akan
+		dihentikan
+	*/
 }
