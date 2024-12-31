@@ -13,6 +13,7 @@ func main() {
 	fmt.Println(names[0], names[1], names[2], names[3])
 	// output : trafalgar d water law
 
+
 	// contoh inisialisasi nilai awal array
 	var array_buah = [4]string{"apel", "anggur", "pisang", "melon"}
 	fmt.Println("Jumlah elemen array \t\t", len(array_buah))
@@ -32,6 +33,15 @@ func main() {
 		"nissan",
 		"lexus",
 	}
+	
+	fmt.Println(array_mobil[0])
+
+	// atau begini
+	var array_sepatu = make([]string, 2)
+	array_sepatu[0] = "adidas"
+	array_sepatu[1] = "nike"
+
+	fmt.Println(array_sepatu[1])
 
 
 	// Inisialisasi array tanpa jumlah elemen array
@@ -52,5 +62,22 @@ func main() {
 	// Array Multidimensi
 	// > oh shit, here we go again. my first nightmare from learning C
 
-	
+	var numbers1 = [2][3]int{[3]int{3,2,3}, [3]int{3,4,5}} // ini ribet sih
+	var numbers2 = [2][3]int{{3,2,3}, {3,4,5}} // pakai ini aja, mirip kaya C
+
+	fmt.Println("Array numbers1", numbers1)
+	fmt.Println("Array numbers2", numbers2)
+
+	// looping array
+	var array_hp = [4]string{"nokia", "sony", "pixel", "oneplus"}
+
+	for i := 0; i < len(array_hp); i++ {
+		fmt.Printf("elemen %d : %s\n", i, array_hp[i])
+	}
+
+	// atau
+
+	for i, hp := range array_hp {
+		fmt.Printf("elemen %d : %s\n", i, hp)
+	}
 }
